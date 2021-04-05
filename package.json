@@ -16,6 +16,7 @@
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "request": "^2.88.2",
-    "superheroes": "^3.0.0"
+    "superheroes": "^3.0.0",
+    "upper-case": "^2.0.2"
   }
 }
