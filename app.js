@@ -20,7 +20,7 @@ app.get('/',function(req,res){
 
 app.post('/',function(req,res){
     const {firstname,lastname,email} = req.body;
-    
+
     const mailData = {
         members: [
             {
@@ -39,11 +39,11 @@ app.post('/',function(req,res){
     const url = "https://us1.api.mailchimp.com/3.0/lists/7b9b61e9ce";
     const options = {
         method : 'POST',
-        auth : 'nishchay17496@gmail.com:e610f5e4d0eaa9a5796a787aeea96846-us1'
+        auth : 'nishchay17496@gmail.com:13a61b2e927a4c8d3719ba273946b844-us1'
     }
 
     const request = https.request(url,options,(response)=>{
-        if(response.statusCode === 200){
+        if(response.statusCode === 200&&(firstname&&lastname&&email)){
             res.sendFile(__dirname+'/success.html');
         }
         else{
